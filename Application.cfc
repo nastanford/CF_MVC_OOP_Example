@@ -1,4 +1,5 @@
 component {
+  // Set up the application name and session management
   this.name = "testApp";
   this.applicationTimeout = createTimeSpan( 30, 0, 0, 0 ); //30 days
   this.clientManagement = false;
