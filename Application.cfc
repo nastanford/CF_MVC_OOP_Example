@@ -21,6 +21,7 @@ component {
   this.mappings["/TestBox"] = expandPath(absoluteTestBoxPath);
   this.mappings["/Models"] = expandPath(absoluteModelsPath);
 
+  // Change this to the name of the database you want to use
   this.datasource = "testDB";
 
   function onApplicationStart(){}
@@ -30,7 +31,8 @@ component {
   function onSessionEnd( struct sessionScope, struct applicationScope ) {}
 
   function onRequestStart( ) {
-    request.app_name = "Test App";
+    // This is the name of the application that will be displayed in the browser
+    request.app_name = "CF MVC OOP";
   }
   function onRequest( string targetPage ) {
     include arguments.targetPage;
