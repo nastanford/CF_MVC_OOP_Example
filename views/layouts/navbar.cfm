@@ -14,15 +14,18 @@
                 <a class="nav-link btn btn-sm btn-primary text-white" href="index.cfm">Home</a>
               </li>
               <li class="nav-item active">
+                <a class="nav-link btn btn-sm btn-primary text-white" href="index.cfm?home.url&id=7&dept_id=26&class=242&firstname=john&lastname=smith">url Variables</a>
+              </li>
+              <li class="nav-item active">
                 <a class="nav-link btn btn-sm btn-primary text-white" href="index.cfm?home.about">About</a>
               </li>
             </ul>
           </div>
-          <!--- Display User name --->
+          <!--- Display User name if logged in. --->
           <div class="text-white text-right pe-4">  
             <i class="fa-duotone fa-circle-user"></i>    
             Nathan Stanford Sr
-          </div>			
+          </div>
         </nav>
       </div>
 </cfif>
