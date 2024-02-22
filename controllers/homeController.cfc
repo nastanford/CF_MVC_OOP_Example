@@ -2,6 +2,7 @@
 component extends="BaseController" displayname="homeController" hint="Home Controller" {
 
   function index() {
+    // writeDump(request);
     return renderView("home/index", {title="Home"}, "main");
   
   }

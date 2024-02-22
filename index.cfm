@@ -16,11 +16,11 @@
       {
         request.controller = cgi.query_string;
         request.action = 'index';
-
       } else {
         controller_action = ListGetAt(cgi.query_string,1,'/');
         request.controller = ListGetAt(controller_action,1,'.');
-        request.action = ListGetAt(controller_action,2,'.');
+        request.action = ListGetAt(ListGetAt(controller_action,2,'.'),1,'&');
+        Request.urlData=getQueryStringVariables(controller_action);
       }
   }
   
@@ -30,8 +30,21 @@
     //  Call the specified action/function on the controller 
     actionName = request.action;
     result = controller[actionName]();
-    //  Output the result (if any) 
-    cfoutput(  ) {
-      writeOutput("#result#");
+
+
+public struct function getQueryStringVariables(controller_action) {
+  var variables = {};
+  var pairs = ListToArray(controller_action, "&");
+  arrayDeleteAt(pairs, 1);
+  for (var i = 1; i <= ArrayLen(pairs); i++) {
+    var pair = pairs[i];
+    var key = ListFirst(pair, "=");
+    var value = ListLast(pair, "=");
+    variables[key] = value;
+    // Set variables into the request scope
+    request[key] = value;
   }
+  return variables;
+}
+
 </cfscript>
