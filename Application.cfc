@@ -5,8 +5,21 @@ component {
   this.sessionManagement = true;
   this.sessionStorage = true;
   this.sessionTimeout = createTimeSpan( 0, 0, 60, 0 ); // 1 hour 
-  this.mappings["/TestBox"] = expandPath("/test/testbox/");
-  this.mappings["/Models"] = expandPath("/test/models/");
+
+  // Determine the base path of the application
+  applicationBasePath = getDirectoryFromPath(getBaseTemplatePath());
+
+  // Define the relative paths for models and TestBox
+  relativeModelsPath = "models/";
+  relativeTestBoxPath = "testbox/";
+
+  // Define the absolute paths by combining the base path with relative paths
+  absoluteModelsPath = applicationBasePath & relativeModelsPath;
+  absoluteTestBoxPath = applicationBasePath & relativeTestBoxPath;
+
+  // Assign the mappings
+  this.mappings["/TestBox"] = expandPath(absoluteTestBoxPath);
+  this.mappings["/Models"] = expandPath(absoluteModelsPath);
 
   this.datasource = "testDB";
 
