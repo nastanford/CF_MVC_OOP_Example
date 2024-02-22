@@ -1,0 +1,32 @@
+// $white: #ffffff;
+
+// $theme-colors: (
+//     "light":      #dcf5ff,
+//     "dark":       #090718,
+//     "primary":    #273e70,
+//     "secondary":  #566b93,
+//     "info":       #6a94b6,
+//     "accent1":    #454766,
+//     "accent2":    #3c5795,
+//     "accent3":    #afa9bc,
+//     "success":    #2f9e62,
+//     "warning":    #e0ca30,
+//     "danger":     #ec241a,
+// );
+
+$white: #ffffff;
+
+$theme-colors: (
+    "light":      #d2e7f3,
+    "dark":       #050400,
+    "primary":    #293755,
+    "secondary":  #5c7291,
+    "info":       #e19b99,
+    "accent1":    #a9bbe0,
+    "accent2":    #dbd6d5,
+    "accent3":    #7894c8,
+    "success":    #44b876,
+    "warning":    #e8d13d,
+    "danger":     #f62a23,
+);
+@import "../../node_modules/bootstrap/scss/bootstrap";

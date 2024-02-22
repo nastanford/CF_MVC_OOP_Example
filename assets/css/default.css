@@ -1,0 +1,18 @@
+ul.nav-tabs a.active {
+  color: #3a3a3a !important;
+  background-color: #EEEEEE !important;
+  font-weight: bold !important;
+}
+ul.nav-tabs a {
+  color: #FFFFFF !important;
+  background-color: #007698 !important;
+  border: 1px solid transparent; /* Set initial border */
+  transition: border-color 0.3s ease; /* Add transition effect for border color */
+}
+ul.nav-tabs a:not(.active) {
+  border: 1px solid #95a0a9; /* Add border to non-active tabs */
+}
+ul.nav-tabs a:not(.active):hover {
+  border-color: #FFFFFF !important; /* Change border color on hover */
+  background-color: #005266 !important; /* Change background color on hover */
+}
