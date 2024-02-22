@@ -19,7 +19,7 @@
             </ul>
           </div>
           <!--- Display User name --->
-          <div class="text-white text-right">  
+          <div class="text-white text-right pe-4">  
             <i class="fa-duotone fa-circle-user"></i>    
             Nathan Stanford Sr
           </div>			
